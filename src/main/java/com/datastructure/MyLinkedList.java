@@ -35,6 +35,7 @@ public class MyLinkedList {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
+
     //method to append node at end
     public void append(INode newNode) {
         if(this.head == null) {
@@ -48,10 +49,38 @@ public class MyLinkedList {
             this.tail = newNode ;
         }
     }
+
+    //method to insert node between two nodes
+    public void insert(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
     //method to delete(pop) first element from the list
     public INode pop() {
         INode tempNode=this.head;
         this.head=head.getNext();
         return tempNode;
+    }
+    //method to delete last element
+    public INode popLast() {
+        INode tempNode=this.head;
+        while(!tempNode.getNext().equals(tail)){
+            tempNode=tempNode.getNext();
+        }
+        this.tail=tempNode;
+        tempNode=tempNode.getNext();
+        return tempNode;
+    }
+
+    public INode search(Integer key) {
+        INode tempNode=head;
+        INode searchedNode = null;
+        while(tempNode != null && tempNode.getNext() != null){
+            if(tempNode.getKey().equals(key))
+                searchedNode=tempNode;
+            tempNode=tempNode.getNext();
+        }
+        return searchedNode;
     }
 }

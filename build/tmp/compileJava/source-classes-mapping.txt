@@ -2,6 +2,8 @@ com/datastructure/INode.java
  com.datastructure.INode
 com/datastructure/MyNode.java
  com.datastructure.MyNode
+com/datastructure/MyQueue.java
+ com.datastructure.MyQueue
 com/datastructure/MyLinkedList.java
  com.datastructure.MyLinkedList
 com/datastructure/MyStack.java
