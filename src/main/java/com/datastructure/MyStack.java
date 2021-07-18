@@ -18,6 +18,10 @@ public class MyStack {
     public INode peak() {
         return myLinkedList.head;
     }
+    //method to delete top element from stack
+    public INode pop() {
+        return myLinkedList.pop();
+    }
     public static void main(String[] args) {
         System.out.println("Data Structures - Stack And Queue - Problem Using LinkedList");
     }

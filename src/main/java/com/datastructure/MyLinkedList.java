@@ -35,4 +35,23 @@ public class MyLinkedList {
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
     }
+    //method to append node at end
+    public void append(INode newNode) {
+        if(this.head == null) {
+            this.head=newNode;
+        }
+        if(this.tail == null) {
+            this.tail=newNode;
+        }
+        else{
+            this.tail.setNext(newNode);
+            this.tail = newNode ;
+        }
+    }
+    //method to delete(pop) first element from the list
+    public INode pop() {
+        INode tempNode=this.head;
+        this.head=head.getNext();
+        return tempNode;
+    }
 }
