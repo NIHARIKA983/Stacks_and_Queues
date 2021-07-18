@@ -22,4 +22,8 @@ public class MyQueue {
     public void printQueue() {
         myLinkedList.printMyNodes();
     }
+    //method to delete node from beginning
+    public INode deQueue() {
+        return myLinkedList.pop();
+    }
 }
